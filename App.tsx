@@ -16,7 +16,11 @@ const App = () => {
     <Provider store={store}>
       <Counter />
     </Provider>
+    <Provider store={store}>
+      <Counter />
+    </Provider>
   );
+};
 };
 
 export default App;
