@@ -8,12 +8,20 @@ const Counter = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
 
+  const IncrementPress = () =>{
+    dispatch(increment())
+  }
+  const DecrementPress= () =>{
+    dispatch(decrement())
+  }
+
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Count: {count}</Text>
       <View style={styles.buttonContainer}>
-        <Button title="Increment" onPress={() => dispatch(increment())} />
-        <Button title="Decrement" onPress={() => dispatch(decrement())} />
+        <Button title="Increment" onPress={IncrementPress} />
+        <Button title="Decrement" onPress={DecrementPress} />
       </View>
     </View>
   );
